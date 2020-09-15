@@ -191,7 +191,7 @@ form input:valid {
 .active:before {
     width: 18px;
     height: 18px;
-    background: url('img/check.png') center no-repeat;
+    background: url('../img/check.png') center no-repeat;
 }
 
 .bill__title {
