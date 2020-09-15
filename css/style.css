@@ -129,7 +129,7 @@ h4 {
 }
 
 form input:valid {
-    background: url(img/check_green_icon.svg);
+    background: url(../img/check_green_icon.svg);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 5px 10px;
@@ -152,7 +152,7 @@ form input:valid {
 .email-logo::after {
     position: absolute;
     content: '';
-    background: url(img/mail_logo.svg) center no-repeat;
+    background: url(../img/mail_logo.svg) center no-repeat;
     height: 16px;
     width: 20px;
     color: #333333;
