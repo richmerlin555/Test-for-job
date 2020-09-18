@@ -38,7 +38,7 @@ let tab = function() {
 tab();
 
 let meth = function() {
-    let tabNav = document.querySelectorAll(".method");
+    let tabNav = document.querySelectorAll(".bw-1 , .bw-2 , .bw-3 , .bw-4 , .bw-5 , .bw-6");
 
     tabNav.forEach(item => {
         item.addEventListener('click', selectMethod)
@@ -59,23 +59,24 @@ meth();
 
 
 
-document.getElementById('card1').onkeydown = function() {
-    if (this.value.length == this.maxLength)
-        document.getElementById('card2').focus();
-}
-document.getElementById('card2').onkeydown = function() {
-    if (this.value.length == this.maxLength)
-        document.getElementById('card3').focus();
-}
-document.getElementById('card3').onkeydown = function() {
-    if (this.value.length == this.maxLength)
-        document.getElementById('card4').focus();
-}
-document.getElementById('card4').onkeydown = function() {
-    if (this.value.length == this.maxLength)
-        document.getElementById('card5').focus()
+function input_onchange(me) {
+    if (me.value.length < me.getAttribute('maxlength') - 1) {
+        return;
+    }
+    let i;
+    let elements = me.form.elements;
+    for (i = 0, numElements = elements.length; i < numElements; i++) {
+        if (elements[i] == me) {
+            break;
+        }
+    }
+    elements[i + 1].focus();
 }
 
+
+
+
+/*
 var inp = document.getElementById("card5");
 
 var old = 0;
@@ -91,4 +92,4 @@ inp.onkeydown = function() {
         inp.value = inp.value + "/";
 
     old++;
-}
+}*/
