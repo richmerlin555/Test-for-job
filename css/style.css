@@ -602,7 +602,9 @@ svg path {
     .form__inner_right {
         width: 100%;
     }
-    .bill__inner_right.tab1.cheked {
+    .bill__inner_right.tab1.cheked,
+    .bill__inner_right.tab2.cheked,
+    .bill__inner_right.tab3.cheked {
         display: block;
     }
     .payment {
